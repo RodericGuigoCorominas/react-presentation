@@ -6,6 +6,7 @@ type SlideType = {
   content: ReactNode | null;
   center?: boolean;
   fullScreen?: boolean;
+  id?: string;
 };
 
 type SlideProps = SlideType & {
@@ -33,7 +34,7 @@ const slideBox: React.CSSProperties = {
   borderRadius: "28px",
   padding: "36px 44px",
   maxWidth: "1100px",
-  width: "min(1100px, 94vw)",
+  width: "min(1100px, 96vw)",
   minHeight: "min(85vh, 760px)",
   maxHeight: "88vh",
   boxShadow: "0 20px 60px rgba(0, 0, 0, 0.35)",
@@ -104,17 +105,17 @@ const slides: SlideType[] = [
       <div>
         <b>My Education</b>
          <ul>
-          <li>Degrees in Mathematics & Physics,</li>
-          <li>Postgraduate Degree in Data Science & Big Data,</li>
-          <li>Doctorate in Mathematics, </li>
-          <li>Research in Pure Mathematics and ML.</li>
+          <li>Bachelor's Degrees in Mathematics & Physics (UB),</li>
+          <li>Postgraduate Degree in Data Science & Big Data (UB),</li>
+          <li>Doctorate Degree in Mathematics (BU), </li>
+          <li>Research in Pure Mathematics, Applied ML, and Math Education.</li>
         </ul>
         <b>My Current Focus </b>
         <ul>
-          <li>College education ...</li>
-          <li>including teaching, teacher instruction and coordination, and curriculum development ...</li>
-          <li>in mathematics, statistics and data science ...</li>
-          <li>for interdisciplinary audiences ...</li>
+          <li>College education,</li>
+          <li>including teaching, mentoring, coordination, and curriculum development</li>
+          <li>in mathematics and data science </li>
+          <li>for interdisciplinary audiences</li>
           <li>ranging from engineering, life sciences and social sciences.</li>
         </ul>
       </div>
@@ -122,17 +123,14 @@ const slides: SlideType[] = [
   },
   {
     title: "Overview",
-    subtitle: "What will we focus on?",
+    subtitle: "What are the main questions?",
     center: true,
     content: (
       <div>
         <ul>
-          <li><b>Student Perspective:</b> assessing the effects of AI 
-          on learning and student engagement</li>
-          <li><b>Instructor Perspective:</b> leveraging AI to complement and enhance 
-          instruction and engagement, </li>
-          <li><b>Curriculum Pespective:</b> rethinking the core skills that students must have to be 
-          competent, active contributors to the workforce. </li>
+          <li><b>Student Perspective:</b> Evaluating the impact of AI on learning outcomes and student engagement.</li>
+          <li><b>Instructor Perspective:</b> Leveraging AI to enhance instructional design and delivery.</li>
+          <li><b>Curriculum Perspective:</b> Rethinking core competencies to ensure students are prepared to contribute effectively in an AI-driven workforce.</li>
         </ul>
       </div>
     ),
@@ -186,17 +184,6 @@ const slides: SlideType[] = [
   },
   {
     title: "AI Student Survey (Harvard Math)",
-    subtitle: "Math vs Writing",
-    content: (
-      <img
-        src="/hu_mathvother_llms.png"
-        alt="Figure"
-        style={{ width: "100%", maxHeight: "55vh", objectFit: "contain" }}
-      />
-    ),
-  },
-  {
-    title: "AI Student Survey (Harvard Math)",
     subtitle: "Purpose",
     content: (
       <img
@@ -207,19 +194,122 @@ const slides: SlideType[] = [
     ),
   },
   {
-    title: "Good or bad?",
-    subtitle: "Purpose",
+    title: "AI Student Survey (Harvard Math)",
+    subtitle: "Math vs Other",
+    content: (
+      <img
+        src="/hu_mathvother_llms.png"
+        alt="Figure"
+        style={{ width: "100%", maxHeight: "55vh", objectFit: "contain" }}
+      />
+    ),
+  },
+  {
+    title: "When is AI Appropriate?",
+    subtitle: "Common Expectations and Assumptions",
     center: true,
     content: (
-      <div>
-        <p>
-          Students have changed the way they learn. Institutions are slowly adapting to the new
-          realities. 
-        </p>
-        <p>
-          We need assessments to whether is positive or negative. 
-        </p>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr",
+          gap: "24px",
+        }}
+      >
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>Always</h3>
+            <ul>
+              <li> Clarify or explain a concept</li> 
+              <li> Search for references</li> 
+              <li> Perform hard calculation</li>
+            </ul>
+        </div>
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>Sometimes</h3>
+            <ul>
+              <li> Give trategy to solve a homework problem</li> 
+              <li> Write an outline for your thesis</li> 
+              <li> Check whether an idea is sound</li>
+            </ul>
+        
+        </div>
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>Never</h3>
+            <ul>
+              <li> Solve a homework problem</li> 
+              <li> Write a report</li> 
+              <li> Scan a picture of an exam</li>
+            </ul>
+        
+        </div>
       </div>
+    ),
+  },
+  {
+    title: "Friend or Foe?",
+    subtitle: "Likely Both",
+    center: true,
+    content: (
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "24px",
+        }}
+      >
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>What has changed?</h3>
+            <ul>
+              <li>How students engage with and approach learning.</li>
+              <li>The quantitative skills required to remain competitive.</li>
+              <li>Significant uncertainty about long-term impacts.</li>
+            </ul>
+        </div>
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>What do we do?</h3>
+            <ul>
+              <li>Study long-term effects on cognition and learning.</li>
+              <li>Invest in sustained, rigorous education research.</li>
+              <li>Adopt and adapt responsibly.</li>
+            </ul>
+        </div>
+      </div>
+
     ),
   },
   {
@@ -256,6 +346,8 @@ const slides: SlideType[] = [
           alt="Figure"
           style={{ width: "100%", maxHeight: "40vh", objectFit: "contain" }}
         />
+        <p><i>"Overall, the findings underscore the value of designing AI-permitted 
+          environments that cultivate reflective checking and collaborative reasoning, alongside guidance for responsible use."</i></p>
       </div>
     ),
   },
@@ -313,7 +405,7 @@ const slides: SlideType[] = [
       <div style={{ width: "100%" }}>
         <div style={embedCard}>
           <iframe
-            src="/ai_cognitive_debt_mit.pdf"
+            src="/ai_dependency.pdf"
             title="PDF Viewer"
             style={{
               width: "100%",
@@ -330,36 +422,13 @@ const slides: SlideType[] = [
   },
   {
     title: "Industry Perspective",
-    subtitle: "",
+    subtitle: "The Change in the Professional Landscape",
     center: true,
     content: (
-      <div style={{ width: "100%" }}>
-        <div style={embedCard}>
-          <iframe
-            src=""
-            title="PDF Viewer"
-            style={{
-              width: "100%",
-              height: "70vh",
-              minHeight: "420px",
-              maxHeight: "560px",
-              border: "none",
-              display: "block",
-            }}
-          />
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "When is AI Appropriate?",
-    subtitle: "Expectations and Assumptions",
-    center: true,
-    content: (
-      <div
+           <div
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
+          gridTemplateColumns: "1fr 1fr",
           gap: "24px",
         }}
       >
@@ -371,11 +440,16 @@ const slides: SlideType[] = [
             border: "1px solid #e2e8f0",
           }}
         >
-          <h3 style={{ marginTop: 0 }}>Always</h3>
-            <ul>
-              <li> Clarify or explain a concept</li> 
-              <li> Search for references</li> 
-            </ul>
+          <h3 style={{ marginTop: 0 }}>Future of Jobs Report, WEF 2025</h3>
+      <p>
+          Institutions ought to push for guardrails, tailored tools that
+          provide:
+        </p>
+        <ul>
+          <li>skill transformation,</li>
+          <li>Demand shifting toward: analytical thinking, creative thinking, flexibility</li>
+          <li>Tailor to Institution</li>
+        </ul>
         </div>
         <div
           style={{
@@ -385,35 +459,235 @@ const slides: SlideType[] = [
             border: "1px solid #e2e8f0",
           }}
         >
-          <h3 style={{ marginTop: 0 }}>Sometimes</h3>
-            <ul>
-              <li> Give trategy to solve a homework problem</li> 
-              <li> Write an outline for your thesis</li> 
-            </ul>
-        
-        </div>
-        <div
-          style={{
-            background: "#f8fafc",
-            borderRadius: "18px",
-            padding: "24px",
-            border: "1px solid #e2e8f0",
-          }}
-        >
-          <h3 style={{ marginTop: 0 }}>Never</h3>
-            <ul>
-              <li> Solve a homework problem</li> 
-              <li> Write a report</li> 
-              <li> Scan a picture of an exam</li>
-            </ul>
-        
+          <h3 style={{ marginTop: 0 }}>AI Jobs Barometer, PwC 2025</h3>
+          <p>
+            AI is increasing worker value and productivity, while rapidly changing skill demand 
+          </p>
+     
         </div>
       </div>
     ),
   },
   {
-    title: "Learning Styles",
-    subtitle: "Drawbacks and Benefits",
+    title: "Institutions",
+    subtitle: "Likely Both",
+    center: true,
+    content: (
+      <div>
+        <ul>
+          <li>What to Keep</li>
+          <li>Adapt. </li>
+          <li>Ditch. </li>
+        </ul>
+      </div>
+    ),
+  },  
+  {
+    title: "Harvard Introductory Math",
+    subtitle: "What Has and Hasn't Changed",
+    center: true,
+    content: null,
+  },
+  {
+    title: "Deployment of AI Tutors",
+    subtitle: "In Multivariable Calculus (Math 21a)",
+    content: (
+     <img
+        src="/21a_tutor.png"
+        alt="Figure"
+        style={{ width: "100%", maxHeight: "70vh", objectFit: "contain" }}
+      />
+    ),
+  },
+  {
+    title: "",
+    subtitle: "",
+    fullScreen: true,
+    content: (
+      <div>
+        <iframe
+            title="Applet"
+            src="https://rodericguigocorominas.github.io/interactive-classrooms/"
+            style={{ width: "500%", height: "100%", border: "none" }}
+          />
+      </div>
+    ),
+  },
+  {
+    title: "",
+    subtitle: "",
+    fullScreen: true,
+    content: (
+      <div>
+          <iframe
+            title="Applet"
+            src="https://rodericguigocorominas.github.io/linalg-tf-practice"
+            style={{ width: "500%", height: "100%", border: "none" }}
+          />
+      </div>
+    ),
+  },
+  {
+    title: "Harvard Introductory Math",
+    subtitle: "What Hasn't Changed",
+    center: true,
+    content: (
+      <div>
+        <ul>
+          <li>Decrease in Office Hours. </li>
+          <li>Reweight Homework - Exams.</li>
+          <li>.</li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    title: "First Reflection",
+    subtitle: "Aim for a Controlled Use of AI",
+    center: true,
+    content: (
+        <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "24px",
+        }}
+      >
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>For Students</h3>
+      <p>
+          Institutions ought to push for guardrails, and the design of tailored AI-powered tools with good pedagogical practices:
+        </p>
+        <ul>
+          <li>Cognitive Load Management</li>
+          <li>Growth Mindset</li>
+          <li>Curated Content</li>
+        </ul>
+        </div>
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>For Instructors</h3>
+          <p>
+           AI-fluent, able to leverage it to develop teaching tools and platforms for student engagement, lesson planning, and course management.
+          </p>
+     
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "Second Reflection",
+    subtitle: "Practical vs Conceptual",
+    center: true,
+    content: (
+            <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "24px",
+        }}
+      >
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>Before AI Boom</h3>
+          <p>
+            Emphasis put into <i>problem solving</i>. High value of synthesis, 
+            memorization and techincal skills.
+          </p>
+        </div>
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>After AI Boom</h3>
+          <p>
+            Emphasis in <i>problem framing</i>: decision making, 
+            results evaluation, critical thinking and reasoning, communication. 
+        
+          </p>
+     
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "Third Reflection",
+    subtitle: "Scarcity Value of In-Person Learning",
+    center: true,
+    content: (
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "24px",
+        }}
+      >
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>A Rare Gem</h3>
+          <p>
+            In person instruction will become a unique, controlled environment,
+            in which students will actively engage with
+            problem-solving, critical thinking, with limited technology. This will be critical to 
+            develope cognitive skills. 
+          </p>
+        </div>
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>Excellence in Teaching</h3>
+          <p>
+            <i>
+              "Contrary to some popular opinions, this effort [adoption of AI
+              tools for teaching and learning] will require teachers with even deeper knowledge of math
+              instruction and assessment— math teachers with more experience,
+              not less."
+            </i>
+          </p>
+          <p style={{ textAlign: "center" }}>
+            National Council of Teachers of Mathematics
+          </p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "How Will Students Learn?",
+    subtitle: "Difference in Styles",
     content: (
       <div
         style={{
@@ -447,9 +721,9 @@ const slides: SlideType[] = [
         >
           <h3 style={{ marginTop: 0 }}>Active Learning</h3>
           <ul>
-            <li>Class moves at different paces</li>
-            <li>Students get personalized feedback</li>
-            <li>Consistent engagement required</li>
+            <li>Class pace is moderately adapted</li>
+            <li>Students get more personalized feedback</li>
+            <li>Consistent engagement</li>
           </ul>
         </div>
         <div
@@ -460,12 +734,11 @@ const slides: SlideType[] = [
             border: "1px solid #e2e8f0",
           }}
         >
-          <h3 style={{ marginTop: 0 }}>Unguided AI/Online Learning</h3>
+          <h3 style={{ marginTop: 0 }}>Unguided AI</h3>
           <ul>
             <li>Moves at student’s pace</li>
-            <li>Personalized feedback</li>
-            <li>Questionable relevance of feedback</li>
-            <li>No pedagogical skills</li>
+            <li>Personalized but questionable feedback</li>
+            <li>Not pedagogical</li>
           </ul>
         </div>
         <div
@@ -476,228 +749,86 @@ const slides: SlideType[] = [
             border: "1px solid #e2e8f0",
           }}
         >
-          <h3 style={{ marginTop: 0 }}>Guided AI/Online Learning (Tutor)</h3>
+          <h3 style={{ marginTop: 0 }}>Guided AI</h3>
           <ul>
             <li>Moves at student’s pace</li>
-            <li>No personalized feedback</li>
-            <li>No consistent engagement</li>
-            <li>More pedagogical skills</li>
+            <li>Personalized and reliable feedback</li>
+            <li>More pedagogical</li>
           </ul>
         </div>
       </div>
     ),
-  },  
-  {
-    title: "Harvard Introductory Math",
-    subtitle: "Our current uses of AI",
-    center: true,
-    content: null,
   },
   {
-    title: "Deployment of AI Tutors",
-    subtitle: "In Multivariable Calculus (Math 21a)",
-    content: (
-     <img
-        src="/21a_tutor.png"
-        alt="Figure"
-        style={{ width: "100%", maxHeight: "70vh", objectFit: "contain" }}
-      />
-    ),
-  },
-  {
-    title: "",
-    subtitle: "",
-    content: (
-      <div>
-        <div
-          style={{
-            width: "100%",
-            height: "600px",
-            border: "1px solid #cbd5e1",
-            marginBottom: "14px",
-            borderRadius: "18px",
-            overflow: "hidden",
-            background: "white",
-            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.6)",
-          }}
-        >
-          <iframe
-            title="Applet"
-            src="https://rodericguigocorominas.github.io/interactive-classrooms/"
-            style={{ width: "100%", height: "100%", border: "none" }}
-          />
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "",
-    subtitle: "",
-    content: (
-      <div>
-        <div
-          style={{
-            width: "100%",
-            height: "600px",
-            border: "1px solid #cbd5e1",
-            marginBottom: "14px",
-            borderRadius: "18px",
-            overflow: "hidden",
-            background: "white",
-            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.6)",
-          }}
-        >
-          <iframe
-            title="Applet"
-            src="https://rodericguigocorominas.github.io/linalg-tf-practice"
-            style={{ width: "100%", height: "100%", border: "none" }}
-          />
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "First Reflection",
-    subtitle: "Aim for a Controlled Use of AI",
-    center: true,
-    content: (
-<div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "24px",
-        }}
-      >
-        <div
-          style={{
-            background: "#f8fafc",
-            borderRadius: "18px",
-            padding: "24px",
-            border: "1px solid #e2e8f0",
-          }}
-        >
-          <h3 style={{ marginTop: 0 }}>For Students</h3>
-      <p>
-          Institutions ought to push for guardrails, tailored tools that
-          provide:
-        </p>
-        <ul>
-          <li>Cognitive Load Management</li>
-          <li>Growth Mindset</li>
-          <li>Tailor to Institution</li>
-        </ul>
-        </div>
-        <div
-          style={{
-            background: "#f8fafc",
-            borderRadius: "18px",
-            padding: "24px",
-            border: "1px solid #e2e8f0",
-          }}
-        >
-          <h3 style={{ marginTop: 0 }}>For Instructors</h3>
-          <p>
-          Development of teaching tools, lesson planning, 
-          </p>
-     
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "Second Reflection",
-    subtitle: "About What We Will Teach",
-    center: true,
-    content: (
-            <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "24px",
-        }}
-      >
-        <div
-          style={{
-            background: "#f8fafc",
-            borderRadius: "18px",
-            padding: "24px",
-            border: "1px solid #e2e8f0",
-          }}
-        >
-          <h3 style={{ marginTop: 0 }}>Industry Revolution</h3>
-          <p>
-            Synthesis, memorization, will become less valuable, problem framing, 
-            results evaluation, critical thinking and reasoning. 
-          </p>
-        </div>
-        <div
-          style={{
-            background: "#f8fafc",
-            borderRadius: "18px",
-            padding: "24px",
-            border: "1px solid #e2e8f0",
-          }}
-        >
-          <h3 style={{ marginTop: 0 }}>Conceptual vs Practical</h3>
-          <p>
-          With the once highly praised practical skills becoming less valuable, we ought to create a distinguishing
-          factor by empowering students with knowledge. Before, knowing how to
-          diagonalize a matrix is more useful than understanding the definition of
-          vector space. NEED A GOOD EXAMPLE.
-          </p>
-     
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "Third Reflection",
-    subtitle: "Scarcity Value of In-Person Learning",
-    center: true,
+    title: "How Will Students Learn?",
+    subtitle: "Difference in Styles",
     content: (
       <div
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
-          gap: "24px",
+          gap: "2px",
         }}
       >
         <div
           style={{
             background: "#f8fafc",
             borderRadius: "18px",
-            padding: "24px",
+            padding: "20px",
             border: "1px solid #e2e8f0",
           }}
         >
-          <h3 style={{ marginTop: 0 }}>How to title this?</h3>
-          <p>
-            In person instruction will become a unique, controlled environment,
-            in which students ought to be pushed into actively engaging with
-            problem-solving, critical thinking, and without technology. Active 
-            engagement by students will be critical. 
-          </p>
+          <h3 style={{ marginTop: 0 }}>Passive Lecturing</h3>
+          <ul>
+            <li>Moves at a single pace</li>
+            <li>No personalized feedback</li>
+            <li>No consistent engagement</li>
+          </ul>
+        </div>
+        <div
+          style={{
+            background: "#a1cdb3",
+            borderRadius: "18px",
+            padding: "20px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>Active Learning</h3>
+          <ul>
+            <li>Class pace is moderately adapted</li>
+            <li>Students get more personalized feedback</li>
+            <li>Consistent engagement</li>
+          </ul>
         </div>
         <div
           style={{
             background: "#f8fafc",
             borderRadius: "18px",
-            padding: "24px",
+            padding: "20px",
             border: "1px solid #e2e8f0",
           }}
         >
-          <h3 style={{ marginTop: 0 }}>Excellence in Teaching</h3>
-          <p>
-            <i>
-              "Contrary to some popular opinions, this effort [adoption of AI
-              tools for teaching and learning] will require teachers with even deeper knowledge of math
-              instruction and assessment— math teachers with more experience,
-              not less."
-            </i>
-          </p>
-          <p style={{ textAlign: "center" }}>
-            (National Council of Teachers of Mathematics)
-          </p>
+          <h3 style={{ marginTop: 0 }}>Unguided AI</h3>
+          <ul>
+            <li>Moves at student’s pace</li>
+            <li>Personalized but questionable feedback</li>
+            <li>Not pedagogical</li>
+          </ul>
+        </div>
+        <div
+          style={{
+            background: "#a1cdb3",
+            borderRadius: "18px",
+            padding: "20px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>Guided AI</h3>
+          <ul>
+            <li>Moves at student’s pace</li>
+            <li>Personalized and reliable feedback</li>
+            <li>More pedagogical</li>
+          </ul>
         </div>
       </div>
     ),
@@ -720,22 +851,12 @@ const slides: SlideType[] = [
         </ul>
       </div>
     ),
-  },
+  },  
   {
-    title: "What Successful Teaching Programs will Looks Like",
-    subtitle: "Our Tenets",
+    title: "The Human Component",
+    subtitle: "What Must Remain",
     center: true,
-    content: (
-      <div>
-        <ul>
-          <li>Collaborative, allowing for instructors' voice instead of imposing.</li>
-          <li>Active Learning</li>
-          <li>Continued Engagement, </li>
-          <li>Focus on Human component, experience etc. </li>
-          <li></li>
-        </ul>
-      </div>
-    ),
+    content: null,
   },
   {
     title: "Why am I here?",
@@ -754,15 +875,15 @@ const slides: SlideType[] = [
         "Professors won’t be replaced, but they will focus more
          on developing students’ uniquely human traits"
       </i></p>
-      <p>Do Better, ESADE</p>
+      <p><i>Keeping education human in an AI-driven world</i>, Do Better, ESADE</p>
         </div>
 
 
     ),
   },
   {
-    title: "Human Characteristics",
-    subtitle: "The Soft Skills",
+    title: "The Value of Teaching",
+    subtitle: "Creating the right environments",
     center: true,
     content: (
     <div
@@ -773,21 +894,29 @@ const slides: SlideType[] = [
             border: "1px solid #e2e8f0",
           }}
         >
-      <p></p>
+      <p>
+          <ul>
+            <li>Engage</li>
+            <li>Creative Aspects</li>
+            <li></li>
+            <li></li>
+          </ul>
+
+      </p>
         </div>
 
 
     ),
   },
   {
-  title: "Aesthetics",
+  title: "Narrative and Aesthetics",
   subtitle: "Enhancing Experience and Learning Through Aesthetics",
   center: true,
   content: (
  <div
   style={{
     display: "flex",
-    flexDirection: "column", // 👈 key change
+    flexDirection: "column",
     gap: "20px",
     alignItems: "center",
     width: "100%",
@@ -832,7 +961,35 @@ const slides: SlideType[] = [
   ),
 },
   {
-    title: "Narrative as a Tool: Multivariable Calculus Math 21a",
+    title: "Narrative and Aesthetics",
+    subtitle: "Enhancing In-Person Teaching",
+    center: true,
+    content: (
+    <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+      <ul>
+        <li>Math classes, textbooks have uninteresting story archs. Typically: Definition - Concept - Application. </li>
+        <li>Don't create a need for discovery, </li>
+        <li>Foster an environment that motivates geniune engagement, human component,</li>
+        <li>The introduction of narratively sophisticated story archs can:
+          <ul>
+            <li></li>
+            <li>Enhance the experience</li>
+          </ul>
+
+        </li>
+      </ul>
+        </div>
+    ),
+  },
+  {
+    title: "Narrative and Aesthetics",
     subtitle: "Framework",
     center: true,
     content: (
@@ -851,53 +1008,193 @@ const slides: SlideType[] = [
     ),
   },
   {
-    title: "Narrative as a Tool: Multivariable Calculus Math 21a",
-    subtitle: "Questions",
+    title: "Narrative in Multivariable Calculus",
+    subtitle: "Common Expectations and Assumptions",
     center: true,
     content: (
-      <div>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr",
+          gap: "24px",
+        }}
+      >
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>Always</h3>
+        Does emphasis on a narrative have a positive effect on any of the following?
         <ul>
+          <li>instructor </li>
+          <li>student experience</li>
+          <li>student engagement</li>
+          <li>student learning</li>
+        </ul>
+        </div>
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>Our Study</h3>
+               <ul>
           <li>Elements stabilized by coordination.</li>
           <li>Effect on student experience.</li>
           <li></li>
           <li></li>
           <li></li>
         </ul>
+        
+        </div>
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>The Data</h3>
+            <ul>
+              <li>Exit Tickets</li>
+              <li>.</li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+        </div>
       </div>
     ),
   },
   {
-    title: "Narrative as a Tool: Multivariable Calculus Math 21a",
-    subtitle: "Study",
+    title: "Narrative in Multivariable Calculus",
+    subtitle: "Exit Tickets",
+    center: true,
+    content: (
+      <div>
+        <img
+          src="/narrative_comparison.png"
+          alt="Figure"
+          style={{ width: "100%", maxHeight: "60vh", objectFit: "contain" }}
+        />
+        <p></p>
+      </div>
+    ),
+  },
+  {
+    title: "Narrative in Multivariable Calculus",
+    subtitle: "Exit Tickets Polls, which one do you think?",
+    center: true,
+    content: (
+      <div>
+
+      </div>
+    ),
+  },
+  {
+    title: "Narrative in Teaching",
+    subtitle: "",
     center: true,
     content: (
       <div>
         <ul>
-          <li>Elements stabilized by coordination.</li>
-          <li>Effect on student experience.</li>
           <li></li>
-          <li></li>
-          <li></li>
+          <li>Create tensions through jamming, foreshadowing, questioning. </li>
+          <li>Make lessons distinguishable and relevant. </li>
         </ul>
       </div>
     ),
   },
   {
-    title: "Narrative as a Tool: Multivariable Calculus Math 21a",
+    id: "choose",
+    title: "What should we explore?",
+    subtitle: "Audience choice",
+    center: true,
+    content: (
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "24px",
+          width: "100%",
+        }}
+      >
+        {[
+          { label: "About Myself", id: "about-me" },
+          { label: "Other Research", id: "research" },
+          { label: "Math for Data Science", id: "math-data" },
+          { label: "Other ", id: "misc" },
+        ].map((item) => (
+          <div
+            key={item.id}
+            style={{
+              background: "#f8fafc",
+              borderRadius: "20px",
+              padding: "32px",
+              border: "1px solid #e2e8f0",
+              cursor: "pointer",
+              textAlign: "center",
+              fontSize: "1.5rem",
+              fontWeight: 600,
+              transition: "all 0.2s ease",
+            }}
+          >
+            {item.label}
+          </div>
+        ))}
+      </div>
+    ),
+  },
+  {
+    id: "about-me",
+    title: "About Myself",
     subtitle: "Results of Ongoing Study",
     center: true,
     content: (
       <div>
-        <ul>
-          <li>Clear changes.</li>
-          <li>.</li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
       </div>
     ),
   },
+  {
+    id: "research",
+    title: "Research",
+    subtitle: "Results of Ongoing Study",
+    center: true,
+    content: (
+      <div>
+      </div>
+    ),
+  },
+  {
+    id: "math-data",
+    title: "Math for Data Science",
+    subtitle: "Rethinking Calculus and Linear Algebra",
+    center: true,
+    content: (
+      <div>
+      </div>
+    ),
+  },
+  {
+    id: "misc",
+    title: "Other",
+    subtitle: "What should I add",
+    center: true,
+    content: (
+      <div>
+      </div>
+    ),
+  },
+
+
 ];
 
 function Slide({ title, subtitle, content, center, fullScreen }: SlideProps) {
@@ -925,6 +1222,46 @@ function Slide({ title, subtitle, content, center, fullScreen }: SlideProps) {
     <div style={{ ...slideBox, justifyContent: center ? "center" : "flex-start", }} > <div> <h1 style={{ fontSize: "clamp(2.2rem, 4vw, 3.5rem)", lineHeight: 1.08, margin: 0, }} > {title} </h1> {subtitle ? ( <h2 style={{ color: "#0b7285", fontSize: "clamp(1.2rem, 2vw, 1.8rem)", fontWeight: 600, marginTop: "10px", marginBottom: 0, }} > {subtitle} </h2> ) : null} </div> {hasContent ? ( <div style={{ marginTop: "28px", fontSize: "1.4rem", lineHeight: 1.6, flex: center ? "unset" : 1, minHeight: 0, overflowY: center ? "hidden" : "auto", paddingRight: center ? "0" : "8px", }} > {content} </div> ) : null} </div>)
 }
 
+function ChooseSlide({ goToSlide }: { goToSlide: (id: string) => void }) {
+  const items = [
+    { label: "About Myself", id: "about-me" },
+    { label: "Other Research", id: "research" },
+    { label: "Math for Data Science", id: "math-data" },
+    { label: "Other", id: "misc" },
+  ];
+
+  return (
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        gap: "24px",
+        width: "100%",
+      }}
+    >
+      {items.map((item) => (
+        <div
+          key={item.id}
+          onClick={() => goToSlide(item.id)}
+          style={{
+            background: "#f8fafc",
+            borderRadius: "20px",
+            padding: "32px",
+            border: "1px solid #e2e8f0",
+            cursor: "pointer",
+            textAlign: "center",
+            fontSize: "1.5rem",
+            fontWeight: 600,
+            transition: "all 0.2s ease",
+          }}
+        >
+          {item.label}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function App() {
   const [current, setCurrent] = useState<number>(0);
   const [hoverPrev, setHoverPrev] = useState(false);
@@ -934,6 +1271,15 @@ export default function App() {
 
   const next = () => setCurrent((c) => Math.min(slides.length - 1, c + 1));
   const prev = () => setCurrent((c) => Math.max(0, c - 1));
+
+  const goToSlide = (id: string) => {
+    const index = slides.findIndex((s) => s.id === id);
+    if (index !== -1) {
+      setCurrent(index);
+    } else {
+      console.warn(`Slide with id "${id}" not found`);
+    }
+  };
 
   useEffect(() => {
     const nextKeys = new Set([
@@ -1037,3 +1383,4 @@ export default function App() {
     </div>
   );
 }
+
