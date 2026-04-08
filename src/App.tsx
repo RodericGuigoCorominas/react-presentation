@@ -15,36 +15,28 @@ type SlideProps = SlideType & {
 };
 
 const containerStyle: React.CSSProperties = {
-  minHeight: "98vh",
-  width: "99vw",
+  height: "100vh",
+  width: "100vw",
   background: "linear-gradient(135deg, #0f576b, #0b3f4d)",
-  color: "#e2e8f0",
   display: "flex",
-  flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  fontFamily: "Inter, system-ui, sans-serif",
-  padding: "16px",
-  boxSizing: "border-box",
   overflow: "hidden",
+  margin: 0,
+  padding: 0,
 };
 
 const slideBox: React.CSSProperties = {
-  background: "rgba(255, 255, 255, 0.92)",
+  background: "rgba(255,255,255,0.95)",
   borderRadius: "28px",
-  padding: "36px 44px",
-  maxWidth: "1100px",
-  width: "min(1100px, 96vw)",
-  minHeight: "min(85vh, 760px)",
-  maxHeight: "88vh",
-  boxShadow: "0 20px 60px rgba(0, 0, 0, 0.35)",
-  backdropFilter: "blur(10px)",
-  border: "1px solid rgba(255, 255, 255, 0.15)",
-  color: "#0f172a",
+  padding: "56px 72px",
+  width: "95vw",
+  height: "92vh",
   boxSizing: "border-box",
   display: "flex",
   flexDirection: "column",
   overflow: "hidden",
+  color: "#0f172a",
 };
 
 const embedCard: React.CSSProperties = {
@@ -128,9 +120,15 @@ const slides: SlideType[] = [
     content: (
       <div>
         <ul>
-          <li><b>Student Perspective:</b> Evaluating the impact of AI on learning outcomes and student engagement.</li>
-          <li><b>Instructor Perspective:</b> Leveraging AI to enhance instructional design and delivery.</li>
-          <li><b>Curriculum Perspective:</b> Rethinking core competencies to ensure students are prepared to contribute effectively in an AI-driven workforce.</li>
+          <li><b>Review Literature:</b> what do we currently "know"</li>
+          <li><b>Experience and Current Actions:</b> what I have tried</li>
+          <li><b>Touch three main themes:</b>
+            <ul>
+              <li><b>Student Perspective:</b> impact of AI on learning outcomes and engagement.</li>
+              <li><b>Instructor Perspective:</b> leveraging (and avoiding) AI for instructional design and delivery</li>
+              <li><b>Curriculum Perspective:</b> core competencies and skills that prepare for an AI-driven workforce</li>
+             </ul>
+          </li>
         </ul>
       </div>
     ),
@@ -141,7 +139,7 @@ const slides: SlideType[] = [
     fullScreen: true,
     content: (
         <iframe
-          src="https://embed.polleverywhere.com/ranking_polls/m8pWKQLcMDiAh2M313Hdz?controls=none&short_poll=true"
+          src="https://embed.polleverywhere.com/multiple_choice_polls/77XIdiYBy1lwCp9Ty7IFb?controls=none&short_poll=true"
           title="Poll Everywhere"
           style={{
             width: "100%",
@@ -442,13 +440,12 @@ const slides: SlideType[] = [
         >
           <h3 style={{ marginTop: 0 }}>Future of Jobs Report, WEF 2025</h3>
       <p>
-          Institutions ought to push for guardrails, tailored tools that
-          provide:
+          The future of work is defined by skill transformation, not job disappearance.
         </p>
         <ul>
           <li>skill transformation,</li>
-          <li>Demand shifting toward: analytical thinking, creative thinking, flexibility</li>
-          <li>Tailor to Institution</li>
+          <li>demand shifting toward: analytical thinking, creative thinking, problem-solcing, flexibility</li>
+          <li>workers not reskilling fast enough</li>
         </ul>
         </div>
         <div
@@ -461,30 +458,21 @@ const slides: SlideType[] = [
         >
           <h3 style={{ marginTop: 0 }}>AI Jobs Barometer, PwC 2025</h3>
           <p>
-            AI is increasing worker value and productivity, while rapidly changing skill demand 
+          AI is increasing worker value and productivity, while rapidly changing skill demand 
+            <ul>
+              <li>jobs still growing even in automatable roles</li>
+              <li>higher wages for AI-skilled workers</li>
+              <li>across all industries</li>
+            </ul>
           </p>
      
         </div>
       </div>
     ),
-  },
-  {
-    title: "Institutions",
-    subtitle: "Likely Both",
-    center: true,
-    content: (
-      <div>
-        <ul>
-          <li>What to Keep</li>
-          <li>Adapt. </li>
-          <li>Ditch. </li>
-        </ul>
-      </div>
-    ),
   },  
   {
     title: "Harvard Introductory Math",
-    subtitle: "What Has and Hasn't Changed",
+    subtitle: "What Have We Noticed/Tried",
     center: true,
     content: null,
   },
@@ -529,13 +517,14 @@ const slides: SlideType[] = [
   },
   {
     title: "Harvard Introductory Math",
-    subtitle: "What Hasn't Changed",
+    subtitle: "Other Changes?",
     center: true,
     content: (
       <div>
         <ul>
-          <li>Decrease in Office Hours. </li>
-          <li>Reweight Homework - Exams.</li>
+          <li>Decrease in attendance in office hours</li>
+          <li>Rethinking purpose of homework</li>
+          <li>Reweight of course components</li>
           <li>.</li>
         </ul>
       </div>
@@ -611,7 +600,7 @@ const slides: SlideType[] = [
           <h3 style={{ marginTop: 0 }}>Before AI Boom</h3>
           <p>
             Emphasis put into <i>problem solving</i>. High value of synthesis, 
-            memorization and techincal skills.
+            memorization and technical skills.
           </p>
         </div>
         <div
@@ -834,24 +823,113 @@ const slides: SlideType[] = [
     ),
   },
   {
-    title: "The Future of Mathematics Education",
-    subtitle: "My - Tenets",
+    title: "How Will Students Learn?",
+    subtitle: "Envisioning New Learning Environments",
     center: true,
     content: (
-      <div>
-        <ul>
-          <li><strong>In class:</strong> Students engage deeply with material and 
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr",
+          gap: "24px",
+        }}
+      >
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>In Class</h3>
+        Students engage with material and 
           build quantitative reasoning, problem-solving, and communication skills through active 
-          learning.</li>
-          <li><strong>Outside class:</strong> Students continue learning with personalized
-           AI tools, using appropriate safeguards to reinforce and extend understanding.</li>
-          <li><strong>After college:</strong> Students enter the workforce with strong 
+          learning and discovery.
+        </div>
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>Outside class</h3>
+            Students continue learning with personalized
+           AI tools, using appropriate safeguards to reinforce and extend understanding of content.
+        
+        </div>
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>After college</h3>
+            Students enter the workforce with strong 
           critical thinking and interpersonal skills, prepared to contribute effectively 
-          in AI-enabled environments.</li>
-        </ul>
+          in AI-enabled environments
+        </div>
       </div>
     ),
-  },  
+  }, 
+  {
+    title: "How Will Students Learn?",
+    subtitle: "Envisioning New Learning Environments",
+    center: true,
+    content: (
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr",
+          gap: "24px",
+        }}
+      >
+        <div
+          style={{
+            background: "#a1cdb3",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>In Class</h3>
+        Students engage with material and 
+          build quantitative reasoning, problem-solving, and communication skills through active 
+          learning and discovery.
+        </div>
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>Outside class</h3>
+            Students continue learning with personalized
+           AI tools, using appropriate safeguards to reinforce and extend understanding of content.
+        
+        </div>
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "24px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h3 style={{ marginTop: 0 }}>After college</h3>
+            Students enter the workforce with strong 
+          critical thinking and interpersonal skills, prepared to contribute effectively 
+          in AI-enabled environments
+        </div>
+      </div>
+    ),
+  },   
   {
     title: "The Human Component",
     subtitle: "What Must Remain",
@@ -955,14 +1033,14 @@ const slides: SlideType[] = [
 
   {/* Text below */}
   <p style={{ textAlign: "center", maxWidth: "800px" }}>
-    We often value signs of human effort, judgment, and imperfection.
+    We value signs of human authorship, even at the expense of perfection.
   </p>
 </div>
   ),
 },
   {
     title: "Narrative and Aesthetics",
-    subtitle: "Enhancing In-Person Teaching",
+    subtitle: "Common Issues with Quantitative Courses",
     center: true,
     content: (
     <div
@@ -974,16 +1052,9 @@ const slides: SlideType[] = [
           }}
         >
       <ul>
-        <li>Math classes, textbooks have uninteresting story archs. Typically: Definition - Concept - Application. </li>
-        <li>Don't create a need for discovery, </li>
+        <li>Math classes, textbooks have uninteresting story archs. Typically follow a linear storyline</li>
+        <li>Don't emphasize the need for discovery</li>
         <li>Foster an environment that motivates geniune engagement, human component,</li>
-        <li>The introduction of narratively sophisticated story archs can:
-          <ul>
-            <li></li>
-            <li>Enhance the experience</li>
-          </ul>
-
-        </li>
       </ul>
         </div>
     ),
@@ -1009,7 +1080,7 @@ const slides: SlideType[] = [
   },
   {
     title: "Narrative in Multivariable Calculus",
-    subtitle: "Common Expectations and Assumptions",
+    subtitle: "Enhancing Experience and Learning Through Aesthetics",
     center: true,
     content: (
       <div
@@ -1027,10 +1098,9 @@ const slides: SlideType[] = [
             border: "1px solid #e2e8f0",
           }}
         >
-          <h3 style={{ marginTop: 0 }}>Always</h3>
-        Does emphasis on a narrative have a positive effect on any of the following?
+          <h3 style={{ marginTop: 0 }}>The Questions</h3>
+        Does the <i>narrative</i> have an effect on the following?
         <ul>
-          <li>instructor </li>
           <li>student experience</li>
           <li>student engagement</li>
           <li>student learning</li>
@@ -1045,13 +1115,11 @@ const slides: SlideType[] = [
           }}
         >
           <h3 style={{ marginTop: 0 }}>Our Study</h3>
-               <ul>
-          <li>Elements stabilized by coordination.</li>
-          <li>Effect on student experience.</li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+            <ul>
+              <li>Four instructors</li>
+              <li>Same lessons in a coordinated course</li>
+              <li>Different backgrounds and experience</li>
+            </ul>
         
         </div>
         <div
@@ -1064,11 +1132,10 @@ const slides: SlideType[] = [
         >
           <h3 style={{ marginTop: 0 }}>The Data</h3>
             <ul>
-              <li>Exit Tickets</li>
-              <li>.</li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>Meeting notes</li>
+              <li>Class recordings</li>
+              <li>Debrief interviews</li>
+              <li>Exit tickets</li>
             </ul>
         </div>
       </div>
@@ -1076,7 +1143,7 @@ const slides: SlideType[] = [
   },
   {
     title: "Narrative in Multivariable Calculus",
-    subtitle: "Exit Tickets",
+    subtitle: "Preliminary Insights: Exit Tickets",
     center: true,
     content: (
       <div>
@@ -1090,13 +1157,21 @@ const slides: SlideType[] = [
     ),
   },
   {
-    title: "Narrative in Multivariable Calculus",
-    subtitle: "Exit Tickets Polls, which one do you think?",
-    center: true,
+    title: "",
+    subtitle: "",
+    fullScreen: true,
     content: (
-      <div>
-
-      </div>
+        <iframe
+          src="https://embed.polleverywhere.com/multiple_choice_polls/1HbGDGpdsBfE6gncs40kv?controls=none&short_poll=true"
+          title="Poll Everywhere"
+          style={{
+            width: "100%",
+            height: "100%",
+            border: "none",
+            display: "block",
+            borderRadius: "18px",
+          }}
+        />
     ),
   },
   {
@@ -1219,7 +1294,11 @@ function Slide({ title, subtitle, content, center, fullScreen }: SlideProps) {
   }
 
   return (
-    <div style={{ ...slideBox, justifyContent: center ? "center" : "flex-start", }} > <div> <h1 style={{ fontSize: "clamp(2.2rem, 4vw, 3.5rem)", lineHeight: 1.08, margin: 0, }} > {title} </h1> {subtitle ? ( <h2 style={{ color: "#0b7285", fontSize: "clamp(1.2rem, 2vw, 1.8rem)", fontWeight: 600, marginTop: "10px", marginBottom: 0, }} > {subtitle} </h2> ) : null} </div> {hasContent ? ( <div style={{ marginTop: "28px", fontSize: "1.4rem", lineHeight: 1.6, flex: center ? "unset" : 1, minHeight: 0, overflowY: center ? "hidden" : "auto", paddingRight: center ? "0" : "8px", }} > {content} </div> ) : null} </div>)
+    <div style={{ ...slideBox, justifyContent: center ? "center" : "flex-start", }} > 
+    <div> <h1 style={{ fontSize: "clamp(2.6rem, 4.6vw, 3.5rem)", lineHeight: 1.08, margin: 0, }} > {title} </h1> 
+    {subtitle ? ( <h2 style={{ color: "#0b7285", fontSize: "clamp(1.6rem, 2.6vw, 1.8rem)", fontWeight: 600, marginTop: "10px", marginBottom: 0, }} > {subtitle} </h2> ) : null} </div> 
+    {hasContent ? ( <div style={{ marginTop: "28px", fontSize: "1.5rem", lineHeight: 1.6, flex: center ? "unset" : 1, minHeight: 0, overflowY: center ? "hidden" : "auto", paddingRight: center ? "0" : "8px", }} > 
+      {content} </div> ) : null} </div>)
 }
 
 function ChooseSlide({ goToSlide }: { goToSlide: (id: string) => void }) {
