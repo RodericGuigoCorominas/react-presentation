@@ -94,40 +94,50 @@ const slides: SlideType[] = [
     subtitle: "My Academic Journey",
     center: true,
     content: (
-      <div>
-        <b>My Education</b>
-         <ul>
-          <li>Bachelor's Degrees in Mathematics & Physics (UB),</li>
-          <li>Postgraduate Degree in Data Science & Big Data (UB),</li>
-          <li>Doctorate Degree in Mathematics (BU), </li>
-          <li>Research in Pure Mathematics, Applied ML, and Math Education.</li>
-        </ul>
-        <b>My Current Focus </b>
-        <ul>
-          <li>College education,</li>
-          <li>including teaching, mentoring, coordination, and curriculum development</li>
-          <li>in mathematics and data science </li>
-          <li>for interdisciplinary audiences</li>
-          <li>ranging from engineering, life sciences and social sciences.</li>
-        </ul>
+      <div style={{ display: "flex", alignItems: "flex-start", gap: "20px" }}>
+        
+        {/* Text */}
+        <div style={{ flex: 1 }}>
+          <b>My Education</b>
+          <ul>
+            <li>Bachelor's Degrees in Mathematics & Physics (UB),</li>
+            <li>Postgraduate Degree in Data Science & Big Data (UB),</li>
+            <li>Doctorate Degree in Mathematics (BU), </li>
+            <li>Research in Mathematics, ML, and Math Education.</li>
+          </ul>
+
+          <b>My Current Focus at Harvard University</b>
+          <ul>
+            <li>Teaching, mentoring, coordination, and curriculum development</li>
+            <li>in mathematics and data science</li>
+            <li>interdisciplinary: engineering, life and social sciences.</li>
+          </ul>
+        </div>
+
+        {/* Image */}
+        <div>
+          <img src="/class_pic.png" alt="Profile" style={{ maxWidth: "500px", height: "auto" }} />
+        </div>
+
       </div>
     ),
   },
   {
     title: "Overview",
-    subtitle: "What are the main questions?",
+    subtitle: "What we will discuss today",
     center: true,
     content: (
       <div>
         <ul>
-          <li><b>Review Literature:</b> what do we currently "know"</li>
-          <li><b>Experience and Current Actions:</b> what I have tried</li>
-          <li><b>Touch three main themes:</b>
+          <li><b>Review Literature:</b> current state of things</li>
             <ul>
-              <li><b>Student Perspective:</b> impact of AI on learning outcomes and engagement.</li>
-              <li><b>Instructor Perspective:</b> leveraging (and avoiding) AI for instructional design and delivery</li>
-              <li><b>Curriculum Perspective:</b> core competencies and skills that prepare for an AI-driven workforce</li>
-             </ul>
+                <li><b>Student Perspective:</b> impact of AI on learning outcomes and engagement.</li>
+                <li><b>Instructor Perspective:</b> leveraging (and avoiding) AI for instructional design and delivery</li>
+                <li><b>Curriculum Perspective:</b> core competencies and skills that prepare for an AI-driven workforce</li>
+            </ul>
+          <li><b>My Own Experience and Perspective:</b> what I have implemented and some reflections</li>
+          <li><b>Current Research:</b> study we are carrying out in Harvard's Math 21a (Multivariable Calculus)
+            
           </li>
         </ul>
       </div>
@@ -139,7 +149,7 @@ const slides: SlideType[] = [
     fullScreen: true,
     content: (
         <iframe
-          src="https://embed.polleverywhere.com/multiple_choice_polls/77XIdiYBy1lwCp9Ty7IFb?controls=none&short_poll=true"
+          src="https://embed.polleverywhere.com/multiple_choice_polls/6LS8EheZWwTz7AAfNcurJ?controls=none&short_poll=true"
           title="Poll Everywhere"
           style={{
             width: "100%",
@@ -157,7 +167,7 @@ const slides: SlideType[] = [
     fullScreen: true,
     content: (
         <iframe
-          src="https://embed.polleverywhere.com/multiple_choice_polls/6LS8EheZWwTz7AAfNcurJ?controls=none&short_poll=true"
+          src="https://embed.polleverywhere.com/multiple_choice_polls/77XIdiYBy1lwCp9Ty7IFb?controls=none&short_poll=true"
           title="Poll Everywhere"
           style={{
             width: "100%",
@@ -191,7 +201,7 @@ const slides: SlideType[] = [
       />
     ),
   },
-  {
+  /*{
     title: "AI Student Survey (Harvard Math)",
     subtitle: "Math vs Other",
     content: (
@@ -201,10 +211,60 @@ const slides: SlideType[] = [
         style={{ width: "100%", maxHeight: "55vh", objectFit: "contain" }}
       />
     ),
+  },*/
+  {
+    title: "An Overview of the Current Reality",
+    subtitle: "Identifying Challenges and Opportunities",
+    center: true,
+    content: null,
   },
   {
+  title: "When is AI Appropriate?",
+  subtitle: "Always Ok, Sometimes Ok, Never Ok",
+  center: true,
+  content: (
+    <div style={{ textAlign: "center" }}>
+
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: "16px",
+          maxWidth: "900px",
+          margin: "0 auto",
+        }}
+      >
+        {[
+          "Clarify a concept",
+          "Search for references",
+          "Perform hard calculations",
+          "Give strategy for homework",
+          "Suggest thesis outline",
+          "Check an idea",
+          "Solve a homework problem",
+          "Write a report",
+          "Scan an exam",
+        ].map((word, i) => (
+          <span
+            key={i}
+            style={{
+              fontSize: `${28}px`,
+              background: "#f1f5f9",
+              padding: "8px 14px",
+              borderRadius: "12px",
+            }}
+          >
+            {word}
+          </span>
+        ))}
+      </div>
+    </div>
+  ),
+},
+  {
     title: "When is AI Appropriate?",
-    subtitle: "Common Expectations and Assumptions",
+    subtitle: "Expectations and Assumptions",
     center: true,
     content: (
       <div
@@ -240,7 +300,7 @@ const slides: SlideType[] = [
           <h3 style={{ marginTop: 0 }}>Sometimes</h3>
             <ul>
               <li> Give trategy to solve a homework problem</li> 
-              <li> Write an outline for your thesis</li> 
+              <li> Suggest an outline for your thesis</li> 
               <li> Check whether an idea is sound</li>
             </ul>
         
@@ -472,7 +532,7 @@ const slides: SlideType[] = [
   },  
   {
     title: "Harvard Introductory Math",
-    subtitle: "What Have We Noticed/Tried",
+    subtitle: "Some Things We Have Tried",
     center: true,
     content: null,
   },
@@ -517,18 +577,24 @@ const slides: SlideType[] = [
   },
   {
     title: "Harvard Introductory Math",
-    subtitle: "Other Changes?",
+    subtitle: "Other Challenges We Identified",
     center: true,
     content: (
       <div>
         <ul>
-          <li>Decrease in attendance in office hours</li>
-          <li>Rethinking purpose of homework</li>
-          <li>Reweight of course components</li>
-          <li>.</li>
+          <li>Decreased attendance in office hours</li>
+          <li>Weak correlation between homework and exam performance</li>
+          <li>Reweighted course syllabus components</li>
+          <li>Implemented a standards based grading with a double threshhold</li>
         </ul>
       </div>
     ),
+  },
+  {
+    title: "Some Personal Reflection",
+    subtitle: "My Future Vision",
+    center: true,
+    content: null,
   },
   {
     title: "First Reflection",
@@ -599,8 +665,8 @@ const slides: SlideType[] = [
         >
           <h3 style={{ marginTop: 0 }}>Before AI Boom</h3>
           <p>
-            Emphasis put into <i>problem solving</i>. High value of synthesis, 
-            memorization and technical skills.
+            Emphasis in <i>problem solving</i>. Synthesis, 
+            memorization and technical skills are highly valued. 
           </p>
         </div>
         <div
@@ -613,8 +679,7 @@ const slides: SlideType[] = [
         >
           <h3 style={{ marginTop: 0 }}>After AI Boom</h3>
           <p>
-            Emphasis in <i>problem framing</i>: decision making, 
-            results evaluation, critical thinking and reasoning, communication. 
+            Emphasis in <i>problem framing</i>: decision making, evaluation, critical thinking and reasoning, communication. 
         
           </p>
      
@@ -646,8 +711,7 @@ const slides: SlideType[] = [
           <p>
             In person instruction will become a unique, controlled environment,
             in which students will actively engage with
-            problem-solving, critical thinking, with limited technology. This will be critical to 
-            develope cognitive skills. 
+            problem-solving, critical thinking, with limited technology.
           </p>
         </div>
         <div
@@ -676,7 +740,7 @@ const slides: SlideType[] = [
   },
   {
     title: "How Will Students Learn?",
-    subtitle: "Difference in Styles",
+    subtitle: "Future Learning Environments",
     content: (
       <div
         style={{
@@ -750,7 +814,7 @@ const slides: SlideType[] = [
   },
   {
     title: "How Will Students Learn?",
-    subtitle: "Difference in Styles",
+    subtitle: "Future Learning Environments",
     content: (
       <div
         style={{
@@ -824,7 +888,7 @@ const slides: SlideType[] = [
   },
   {
     title: "How Will Students Learn?",
-    subtitle: "Envisioning New Learning Environments",
+    subtitle: "Future Learning Environments",
     center: true,
     content: (
       <div
@@ -878,7 +942,7 @@ const slides: SlideType[] = [
   }, 
   {
     title: "How Will Students Learn?",
-    subtitle: "Envisioning New Learning Environments",
+    subtitle: "Future Learning Environments",
     center: true,
     content: (
       <div
@@ -1296,8 +1360,8 @@ function Slide({ title, subtitle, content, center, fullScreen }: SlideProps) {
   return (
     <div style={{ ...slideBox, justifyContent: center ? "center" : "flex-start", }} > 
     <div> <h1 style={{ fontSize: "clamp(2.6rem, 4.6vw, 3.5rem)", lineHeight: 1.08, margin: 0, }} > {title} </h1> 
-    {subtitle ? ( <h2 style={{ color: "#0b7285", fontSize: "clamp(1.6rem, 2.6vw, 1.8rem)", fontWeight: 600, marginTop: "10px", marginBottom: 0, }} > {subtitle} </h2> ) : null} </div> 
-    {hasContent ? ( <div style={{ marginTop: "28px", fontSize: "1.5rem", lineHeight: 1.6, flex: center ? "unset" : 1, minHeight: 0, overflowY: center ? "hidden" : "auto", paddingRight: center ? "0" : "8px", }} > 
+    {subtitle ? ( <h2 style={{ color: "#0b7285", fontSize: "clamp(1.8rem, 2.6vw, 2rem)", fontWeight: 600, marginTop: "10px", marginBottom: 0, }} > {subtitle} </h2> ) : null} </div> 
+    {hasContent ? ( <div style={{ marginTop: "28px", fontSize: "1.7rem", lineHeight: 1.6, flex: center ? "unset" : 1, minHeight: 0, overflowY: center ? "hidden" : "auto", paddingRight: center ? "0" : "8px", }} > 
       {content} </div> ) : null} </div>)
 }
 
