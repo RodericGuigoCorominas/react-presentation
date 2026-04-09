@@ -24,6 +24,7 @@ const containerStyle: React.CSSProperties = {
   overflow: "hidden",
   margin: 0,
   padding: 0,
+  fontFamily: "Inter, system-ui, sans-serif",
 };
 
 const slideBox: React.CSSProperties = {
@@ -86,7 +87,19 @@ const slides: SlideType[] = [
     content: (
       <div>
         <p>Roderic Guigó Corominas, April 13th 2026</p>
+        <img
+          src="/attendance_qr.png"
+          alt="QR code"
+          style={{
+            maxWidth: "500px",
+            height: "auto",
+            display: "block",
+            margin: "0 auto"
+          }}
+/>
       </div>
+
+      
     ),
   },
   {
@@ -100,23 +113,23 @@ const slides: SlideType[] = [
         <div style={{ flex: 1 }}>
           <b>My Education</b>
           <ul>
-            <li>Bachelor's Degrees in Mathematics & Physics (UB),</li>
-            <li>Postgraduate Degree in Data Science & Big Data (UB),</li>
-            <li>Doctorate Degree in Mathematics (BU), </li>
-            <li>Research in Mathematics, ML, and Math Education.</li>
+            <li>Bachelor's Degrees in Mathematics & Physics (UB)</li>
+            <li>Postgraduate Degree in Data Science & Big Data (UB)</li>
+            <li>Doctorate Degree in Mathematics (BU) </li>
+            <li>Research in Mathematics, ML, and Math Education</li>
           </ul>
 
           <b>My Current Focus at Harvard University</b>
           <ul>
             <li>Teaching, mentoring, coordination, and curriculum development</li>
             <li>in mathematics and data science</li>
-            <li>interdisciplinary: engineering, life and social sciences.</li>
+            <li>interdisciplinary: engineering, life and social sciences</li>
           </ul>
         </div>
 
         {/* Image */}
         <div>
-          <img src="/class_pic.png" alt="Profile" style={{ maxWidth: "500px", height: "auto" }} />
+          <img src="/class_pic.jpg" alt="Profile" style={{ maxWidth: "500px", height: "auto" }} />
         </div>
 
       </div>
@@ -129,19 +142,25 @@ const slides: SlideType[] = [
     content: (
       <div>
         <ul>
-          <li><b>Review Literature:</b> current state of things</li>
+          <li><b>Literature on AI and Education:</b></li>
             <ul>
-                <li><b>Student Perspective:</b> impact of AI on learning outcomes and engagement.</li>
-                <li><b>Instructor Perspective:</b> leveraging (and avoiding) AI for instructional design and delivery</li>
+                <li><b>Student Perspective:</b> impact on learning and engagement</li>
+                <li><b>Instructor Perspective:</b> leveraging AI for instructional design and delivery</li>
                 <li><b>Curriculum Perspective:</b> core competencies and skills that prepare for an AI-driven workforce</li>
             </ul>
-          <li><b>My Own Experience and Perspective:</b> what I have implemented and some reflections</li>
+          <li><b>My Own Experience and Perspective:</b> what I have implemented and my reflections</li>
           <li><b>Current Research:</b> study we are carrying out in Harvard's Math 21a (Multivariable Calculus)
             
           </li>
         </ul>
       </div>
     ),
+  },
+  {
+    title: "An Overview of the Current Reality",
+    subtitle: "Identifying Challenges and Opportunities",
+    center: true,
+    content: null,
   },
   {
     title: "",
@@ -213,12 +232,6 @@ const slides: SlideType[] = [
     ),
   },*/
   {
-    title: "An Overview of the Current Reality",
-    subtitle: "Identifying Challenges and Opportunities",
-    center: true,
-    content: null,
-  },
-  {
   title: "When is AI Appropriate?",
   subtitle: "Always Ok, Sometimes Ok, Never Ok",
   center: true,
@@ -237,14 +250,14 @@ const slides: SlideType[] = [
       >
         {[
           "Clarify a concept",
-          "Search for references",
-          "Perform hard calculations",
-          "Give strategy for homework",
-          "Suggest thesis outline",
-          "Check an idea",
+          "Scan and solve an exam",
           "Solve a homework problem",
+          "Search for references",
+          "Check an idea",
+          "Perform a hard calculation",
+          "Outline strategy for homework",
+          "Suggest thesis outline",
           "Write a report",
-          "Scan an exam",
         ].map((word, i) => (
           <span
             key={i}
@@ -399,39 +412,39 @@ const slides: SlideType[] = [
     center: true,
     content: (
       <div>
-        <img
-          src="/ai_safeguards.png"
-          alt="Figure"
-          style={{ width: "100%", maxHeight: "40vh", objectFit: "contain" }}
-        />
-        <p><i>"Overall, the findings underscore the value of designing AI-permitted 
+          <p><i>"Overall, the findings underscore the value of designing AI-permitted 
           environments that cultivate reflective checking and collaborative reasoning, alongside guidance for responsible use."</i></p>
+          Integrating Generative AI in University Mathematics: reflective and collaborative learnings as pedagogical safeguards (Y-W. Choi, 2026). 
+   
+          <p><i>"Our analysis shows Tutor CoPilot promotes effective pedagogy, increasing the use of probing questions and reducing generic praise."</i></p>
+          Tutor CoPilot: A Human-AI Approach for Scaling Real-Time Expertise (R. Wang et Al, 2025), 
+
       </div>
     ),
   },
-  {
-    title: "Promising Results",
-    subtitle: "",
-    center: true,
-    content: (
-      <div style={{ width: "100%" }}>
-        <div style={embedCard}>
-          <iframe
-            src="/ai_instructor.pdf"
-            title="PDF Viewer"
-            style={{
-              width: "100%",
-              height: "70vh",
-              minHeight: "420px",
-              maxHeight: "560px",
-              border: "none",
-              display: "block",
-            }}
-          />
-        </div>
-      </div>
-    ),
-  },
+  // {
+  //   title: "Promising Results",
+  //   subtitle: "",
+  //   center: true,
+  //   content: (
+  //     <div style={{ width: "100%" }}>
+  //       <div style={embedCard}>
+  //         <iframe
+  //           src="/ai_instructor.pdf"
+  //           title="PDF Viewer"
+  //           style={{
+  //             width: "100%",
+  //             height: "70vh",
+  //             minHeight: "420px",
+  //             maxHeight: "560px",
+  //             border: "none",
+  //             display: "block",
+  //           }}
+  //         />
+  //       </div>
+  //     </div>
+  //   ),
+  // },
   {
     title: "Potential Challenges",
     subtitle: "",
@@ -537,14 +550,40 @@ const slides: SlideType[] = [
     content: null,
   },
   {
-    title: "Deployment of AI Tutors",
-    subtitle: "In Multivariable Calculus (Math 21a)",
+    title: "",
+    subtitle: "",
+    fullScreen: true,
     content: (
-     <img
-        src="/21a_tutor.png"
-        alt="Figure"
-        style={{ width: "100%", maxHeight: "70vh", objectFit: "contain" }}
-      />
+      <div>
+        <iframe
+            title="AI Tutor"
+            src="https://teachgpt.us"
+            style={{ width: "500%", height: "100%", border: "none" }}
+          />
+      </div>
+    ),
+  },
+  {
+    title: "Potential Challenges",
+    subtitle: "",
+    center: true,
+    content: (
+      <div style={{ width: "100%" }}>
+        <div style={embedCard}>
+          <iframe
+            src="/ai_tutor_21a.pdf"
+            title="PDF Viewer"
+            style={{
+              width: "100%",
+              height: "70vh",
+              minHeight: "420px",
+              maxHeight: "560px",
+              border: "none",
+              display: "block",
+            }}
+          />
+        </div>
+      </div>
     ),
   },
   {
@@ -577,7 +616,7 @@ const slides: SlideType[] = [
   },
   {
     title: "Harvard Introductory Math",
-    subtitle: "Other Challenges We Identified",
+    subtitle: "Other AI Challenges",
     center: true,
     content: (
       <div>
@@ -586,13 +625,14 @@ const slides: SlideType[] = [
           <li>Weak correlation between homework and exam performance</li>
           <li>Reweighted course syllabus components</li>
           <li>Implemented a standards based grading with a double threshhold</li>
+          <li>Made attendance mandatory</li>
         </ul>
       </div>
     ),
   },
   {
-    title: "Some Personal Reflection",
-    subtitle: "My Future Vision",
+    title: "My Reflections",
+    subtitle: "Future Of Education",
     center: true,
     content: null,
   },
@@ -616,9 +656,9 @@ const slides: SlideType[] = [
             border: "1px solid #e2e8f0",
           }}
         >
-          <h3 style={{ marginTop: 0 }}>For Students</h3>
+          <h3 style={{ marginTop: 0 }}>Students</h3>
       <p>
-          Institutions ought to push for guardrails, and the design of tailored AI-powered tools with good pedagogical practices:
+          Use tailored AI-powered tools and agents with guardrails, and good pedagogical practices
         </p>
         <ul>
           <li>Cognitive Load Management</li>
@@ -634,9 +674,9 @@ const slides: SlideType[] = [
             border: "1px solid #e2e8f0",
           }}
         >
-          <h3 style={{ marginTop: 0 }}>For Instructors</h3>
+          <h3 style={{ marginTop: 0 }}>Instructors</h3>
           <p>
-           AI-fluent, able to leverage it to develop teaching tools and platforms for student engagement, lesson planning, and course management.
+           Are AI-fluent, leverage it to enhance student engagement, lesson planning, and course management.
           </p>
      
         </div>
@@ -775,8 +815,8 @@ const slides: SlideType[] = [
           <h3 style={{ marginTop: 0 }}>Active Learning</h3>
           <ul>
             <li>Class pace is moderately adapted</li>
-            <li>Students get more personalized feedback</li>
-            <li>Consistent engagement</li>
+            <li>More personalized feedback</li>
+            <li>More consistent engagement</li>
           </ul>
         </div>
         <div
@@ -849,8 +889,8 @@ const slides: SlideType[] = [
           <h3 style={{ marginTop: 0 }}>Active Learning</h3>
           <ul>
             <li>Class pace is moderately adapted</li>
-            <li>Students get more personalized feedback</li>
-            <li>Consistent engagement</li>
+            <li>More personalized feedback</li>
+            <li>More consistent engagement</li>
           </ul>
         </div>
         <div
@@ -907,9 +947,9 @@ const slides: SlideType[] = [
           }}
         >
           <h3 style={{ marginTop: 0 }}>In Class</h3>
-        Students engage with material and 
-          build quantitative reasoning, problem-solving, and communication skills through active 
-          learning and discovery.
+          Actively engage and 
+          develop <b>quantitative reasoning, problem-solving, and communication</b> skills through <b>active 
+          learning</b>.
         </div>
         <div
           style={{
@@ -920,8 +960,8 @@ const slides: SlideType[] = [
           }}
         >
           <h3 style={{ marginTop: 0 }}>Outside class</h3>
-            Students continue learning with personalized
-           AI tools, using appropriate safeguards to reinforce and extend understanding of content.
+          Continue learning with personalized
+          AI tools with appropriate safeguards to reinforce and extend understanding.
         
         </div>
         <div
@@ -933,9 +973,9 @@ const slides: SlideType[] = [
           }}
         >
           <h3 style={{ marginTop: 0 }}>After college</h3>
-            Students enter the workforce with strong 
-          critical thinking and interpersonal skills, prepared to contribute effectively 
-          in AI-enabled environments
+          Join the workforce with strong 
+          critical thinking and interpersonal skills to contribute effectively 
+          in AI-enabled environments.
         </div>
       </div>
     ),
@@ -961,9 +1001,9 @@ const slides: SlideType[] = [
           }}
         >
           <h3 style={{ marginTop: 0 }}>In Class</h3>
-        Students engage with material and 
-          build quantitative reasoning, problem-solving, and communication skills through active 
-          learning and discovery.
+     Actively engage and 
+          develop <b>quantitative reasoning, problem-solving, and communication</b> skills through <b>active 
+          learning</b>.
         </div>
         <div
           style={{
@@ -974,9 +1014,8 @@ const slides: SlideType[] = [
           }}
         >
           <h3 style={{ marginTop: 0 }}>Outside class</h3>
-            Students continue learning with personalized
-           AI tools, using appropriate safeguards to reinforce and extend understanding of content.
-        
+          Continue learning with personalized
+          AI tools with appropriate safeguards to reinforce and extend understanding.
         </div>
         <div
           style={{
@@ -987,16 +1026,16 @@ const slides: SlideType[] = [
           }}
         >
           <h3 style={{ marginTop: 0 }}>After college</h3>
-            Students enter the workforce with strong 
-          critical thinking and interpersonal skills, prepared to contribute effectively 
-          in AI-enabled environments
+            Join the workforce with strong 
+          critical thinking and interpersonal skills to contribute effectively 
+          in AI-enabled environments.
         </div>
       </div>
     ),
   },   
   {
     title: "The Human Component",
-    subtitle: "What Must Remain",
+    subtitle: "What We Are Already Doing Right",
     center: true,
     content: null,
   },
@@ -1024,33 +1063,62 @@ const slides: SlideType[] = [
     ),
   },
   {
-    title: "The Value of Teaching",
-    subtitle: "Creating the right environments",
-    center: true,
-    content: (
+  title: "Harvard Introductory Math",
+  subtitle: "How to Take Active Learning to the next Level",
+  center: true,
+  content: (
     <div
+      style={{
+        display: "flex",
+        gap: "14px",
+        alignItems: "flex-start",
+        maxWidth: "1200px",
+        margin: "0 auto",
+      }}
+    >
+      {/* Left: your original box */}
+      <div
+        style={{
+          flex: 1,
+          background: "#f8fafc",
+          borderRadius: "18px",
+          padding: "24px",
+          border: "1px solid #e2e8f0",
+        }}
+      >
+        <ul>
+          <li>75 minute small sections of 25 - 40 students</li>
+          <li>Mix of active learning and mini-lectures</li>
+          <li>Daily homework</li>
+          <li>Four assessments throughout the semester</li>
+          <li>Focus on narrative</li>
+        </ul>
+      </div>
+
+      {/* Right: image */}
+      <div
+        style={{
+          width: "550px",
+          borderRadius: "18px",
+          overflow: "hidden",
+          border: "1px solid #e2e8f0",
+        }}
+      >
+        <img
+          src="active_learning.png"
+          alt="Harvard classroom"
           style={{
-            background: "#f8fafc",
-            borderRadius: "18px",
-            padding: "24px",
-            border: "1px solid #e2e8f0",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            display: "block",
           }}
-        >
-      <p>
-          <ul>
-            <li>Engage</li>
-            <li>Creative Aspects</li>
-            <li></li>
-            <li></li>
-          </ul>
-
-      </p>
-        </div>
-
-
-    ),
-  },
-  {
+        />
+      </div>
+    </div>
+  ),
+},
+{
   title: "Narrative and Aesthetics",
   subtitle: "Enhancing Experience and Learning Through Aesthetics",
   center: true,
@@ -1077,8 +1145,8 @@ const slides: SlideType[] = [
       src="/aesthetics_real.tiff"
       alt="Real"
       style={{
-        width: "48%",
-        maxHeight: "45vh",
+        width: "55%",
+        maxHeight: "52vh",
         objectFit: "contain",
         borderRadius: "16px",
       }}
@@ -1087,8 +1155,8 @@ const slides: SlideType[] = [
       src="/aesthetics_chatgpt.png"
       alt="GAI"
       style={{
-        width: "48%",
-        maxHeight: "45vh",
+        width: "55%",
+        maxHeight: "52vh",
         objectFit: "contain",
         borderRadius: "16px",
       }}
@@ -1097,7 +1165,7 @@ const slides: SlideType[] = [
 
   {/* Text below */}
   <p style={{ textAlign: "center", maxWidth: "800px" }}>
-    We value signs of human authorship, even at the expense of perfection.
+    The value of human authorship.
   </p>
 </div>
   ),
@@ -1115,17 +1183,18 @@ const slides: SlideType[] = [
             border: "1px solid #e2e8f0",
           }}
         >
-      <ul>
-        <li>Math classes, textbooks have uninteresting story archs. Typically follow a linear storyline</li>
-        <li>Don't emphasize the need for discovery</li>
-        <li>Foster an environment that motivates geniune engagement, human component,</li>
-      </ul>
-        </div>
+        <ul>
+          <li>Classes, textbooks typically follow <i>uninteresting</i> story archs</li>
+          <li>Topics are introuced linearly, not allow for connections</li>
+          <li>Little emphasize the need for discovery</li>
+          <li>Foster an environment that motivates geniune engagement, human component,</li>
+        </ul>
+      </div>
     ),
   },
   {
     title: "Narrative and Aesthetics",
-    subtitle: "Framework",
+    subtitle: "Framework (L. Dietiker)",
     center: true,
     content: (
       <div>
@@ -1135,14 +1204,38 @@ const slides: SlideType[] = [
           style={{ width: "100%", maxHeight: "40vh", objectFit: "contain" }}
         />
         <p>
-          <i>""...interpreting the content found in mathematics curriculum in order to offer 
-          teachers and other mathematics educators comprehensive conceptual tools 
-          with which to make curricular decisions."</i>
+          <i>“There are no ‘facts’ per se; everything is relative and relational. The story matters, not just the ending.”</i>
         </p>
       </div>
     ),
   },
   {
+  title: "Narrative and Aesthetics",
+  subtitle: "Framework (L. Dietiker)",
+  center: true,
+  content: (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "20px",
+      }}
+    >
+      <img
+        src="/lesson_1.png"
+        alt="Figure 1"
+        style={{ width: "55%", maxHeight: "60vh", objectFit: "contain" }}
+      />
+      <img
+        src="/lesson_2.png"
+        alt="Figure 2"
+        style={{ width: "45%", maxHeight: "50vh", objectFit: "contain" }}
+      />
+    </div>
+  ),
+},
+{
     title: "Narrative in Multivariable Calculus",
     subtitle: "Enhancing Experience and Learning Through Aesthetics",
     center: true,
@@ -1163,7 +1256,7 @@ const slides: SlideType[] = [
           }}
         >
           <h3 style={{ marginTop: 0 }}>The Questions</h3>
-        Does the <i>narrative</i> have an effect on the following?
+        The role of <i>narrative</i> in
         <ul>
           <li>student experience</li>
           <li>student engagement</li>
@@ -1206,8 +1299,31 @@ const slides: SlideType[] = [
     ),
   },
   {
+    title: "Comparison",
+    subtitle: "Green's Theorem",
+    center: true,
+    content: (
+      <div style={{ width: "100%" }}>
+        <div style={embedCard}>
+          <iframe
+            src="/greens_theorem.pdf"
+            title="PDF Viewer"
+            style={{
+              width: "100%",
+              height: "70vh",
+              minHeight: "420px",
+              maxHeight: "560px",
+              border: "none",
+              display: "block",
+            }}
+          />
+        </div>
+      </div>
+    ),
+  },
+  {
     title: "Narrative in Multivariable Calculus",
-    subtitle: "Preliminary Insights: Exit Tickets",
+    subtitle: "Preliminary Insights: Student Exit Tickets",
     center: true,
     content: (
       <div>
@@ -1245,8 +1361,22 @@ const slides: SlideType[] = [
     content: (
       <div>
         <ul>
-          <li></li>
-          <li>Create tensions through jamming, foreshadowing, questioning. </li>
+          <li>Create tensions through jamming, foreshadowing, suspense, equivocation. </li>
+          <li>Distinguishing Ap</li>
+          <li>Make lessons distinguishable and relevant. </li>
+        </ul>
+      </div>
+    ),
+  },
+   {
+    title: "Future",
+    subtitle: "",
+    center: true,
+    content: (
+      <div>
+        <ul>
+          <li>Results To Be Presented at MathFest (Boston August 2026)</li>
+          <li>Distinguishing Ap</li>
           <li>Make lessons distinguishable and relevant. </li>
         </ul>
       </div>
@@ -1332,6 +1462,55 @@ const slides: SlideType[] = [
       </div>
     ),
   },
+  {
+  title: "Teaching Data Science",
+  subtitle: "Four images",
+  center: true,
+  content: (
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        gap: "24px",
+        maxWidth: "900px",
+        margin: "0 auto",
+      }}
+    >
+      {[
+        { src: "lecture_uzhhorod.jpg", caption: "Uzhhorod, Ukraine" },
+        { src: "/images/pic2.jpg", caption: "Example 2" },
+        { src: "/images/pic3.jpg", caption: "Example 3" },
+        { src: "/images/pic4.jpg", caption: "Example 4" },
+      ].map((item, i) => (
+        <div
+          key={i}
+          style={{
+            background: "#fff",
+            borderRadius: "18px",
+            overflow: "hidden",
+            border: "1px solid #e2e8f0",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+            textAlign: "center",
+          }}
+        >
+          <img
+            src={item.src}
+            alt={item.caption}
+            style={{
+              width: "100%",
+              height: "220px",
+              objectFit: "cover",
+              display: "block",
+            }}
+          />
+          <div style={{ padding: "12px 14px", fontSize: "1rem" }}>
+            {item.caption}
+          </div>
+        </div>
+      ))}
+    </div>
+  ),
+}
 
 
 ];
