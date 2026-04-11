@@ -115,15 +115,15 @@ const slides: SlideType[] = [
           <ul>
             <li>Bachelor's Degrees in Mathematics & Physics (UB)</li>
             <li>Postgraduate Degree in Data Science & Big Data (UB)</li>
-            <li>Doctorate Degree in Mathematics (BU) </li>
+            <li>PhD in Mathematics (BU) </li>
             <li>Research in Mathematics, ML, and Math Education</li>
           </ul>
 
           <b>My Current Focus at Harvard University</b>
           <ul>
             <li>Teaching, mentoring, coordination, and curriculum development</li>
-            <li>in mathematics and data science</li>
-            <li>interdisciplinary: engineering, life and social sciences</li>
+            <li>Mathematics and data science</li>
+            <li>Interdisciplinary: engineering, life and social sciences</li>
           </ul>
         </div>
 
@@ -146,10 +146,11 @@ const slides: SlideType[] = [
             <ul>
                 <li><b>Student Perspective:</b> impact on learning and engagement</li>
                 <li><b>Instructor Perspective:</b> leveraging AI for instructional design and delivery</li>
-                <li><b>Curriculum Perspective:</b> core competencies and skills that prepare for an AI-driven workforce</li>
+                <li><b>Curriculum Perspective:</b> core competencies and skills for an AI-driven workforce</li>
             </ul>
-          <li><b>My Own Experience and Perspective:</b> what I have implemented and my reflections</li>
-          <li><b>Current Research:</b> study we are carrying out in Harvard's Math 21a (Multivariable Calculus)
+          <li><b>My Own Experience:</b> how has AI informed and changed my teaching</li>
+          <li><b>Personal Reflection:</b> a vision for the future</li>
+          <li><b>Current Research Study:</b> narrative in Harvard's Multivariable Calculus
             
           </li>
         </ul>
@@ -253,7 +254,7 @@ const slides: SlideType[] = [
           "Scan and solve an exam",
           "Solve a homework problem",
           "Search for references",
-          "Check an idea",
+          "Check a solution",
           "Perform a hard calculation",
           "Outline strategy for homework",
           "Suggest thesis outline",
@@ -297,9 +298,9 @@ const slides: SlideType[] = [
         >
           <h3 style={{ marginTop: 0 }}>Always</h3>
             <ul>
-              <li> Clarify or explain a concept</li> 
+              <li> Clarify a concept</li> 
               <li> Search for references</li> 
-              <li> Perform hard calculation</li>
+              <li> Perform a hard calculation</li>
             </ul>
         </div>
         <div
@@ -312,9 +313,9 @@ const slides: SlideType[] = [
         >
           <h3 style={{ marginTop: 0 }}>Sometimes</h3>
             <ul>
-              <li> Give trategy to solve a homework problem</li> 
-              <li> Suggest an outline for your thesis</li> 
-              <li> Check whether an idea is sound</li>
+              <li> Outline strategy for homework</li> 
+              <li> Suggest thesis outline</li> 
+              <li> Check a solution</li>
             </ul>
         
         </div>
@@ -330,7 +331,7 @@ const slides: SlideType[] = [
             <ul>
               <li> Solve a homework problem</li> 
               <li> Write a report</li> 
-              <li> Scan a picture of an exam</li>
+              <li> Scan and solve an exam</li>
             </ul>
         
         </div>
@@ -359,9 +360,9 @@ const slides: SlideType[] = [
         >
           <h3 style={{ marginTop: 0 }}>What has changed?</h3>
             <ul>
-              <li>How students engage with and approach learning.</li>
-              <li>The quantitative skills required to remain competitive.</li>
-              <li>Significant uncertainty about long-term impacts.</li>
+              <li>How students engage with learning</li>
+              <li>Quantitative skills required to be competitive</li>
+              <li>Potential long-term impact</li>
             </ul>
         </div>
         <div
@@ -374,9 +375,9 @@ const slides: SlideType[] = [
         >
           <h3 style={{ marginTop: 0 }}>What do we do?</h3>
             <ul>
-              <li>Study long-term effects on cognition and learning.</li>
-              <li>Invest in sustained, rigorous education research.</li>
-              <li>Adopt and adapt responsibly.</li>
+              <li>Research long-term effects on cognition and learning</li>
+              <li>Review institutional data</li>
+              <li>Adopt and adapt accordingly</li>
             </ul>
         </div>
       </div>
@@ -412,12 +413,12 @@ const slides: SlideType[] = [
     center: true,
     content: (
       <div>
-          <p><i>"Overall, the findings underscore the value of designing AI-permitted 
-          environments that cultivate reflective checking and collaborative reasoning, alongside guidance for responsible use."</i></p>
+          <p><i>"Overall, the findings underscore the value of designing <b>AI-permitted 
+          environments that cultivate reflective checking and collaborative reasoning</b>, alongside guidance for responsible use."</i></p>
           Integrating Generative AI in University Mathematics: reflective and collaborative learnings as pedagogical safeguards (Y-W. Choi, 2026). 
    
-          <p><i>"Our analysis shows Tutor CoPilot promotes effective pedagogy, increasing the use of probing questions and reducing generic praise."</i></p>
-          Tutor CoPilot: A Human-AI Approach for Scaling Real-Time Expertise (R. Wang et Al, 2025), 
+          <p><i>"Our analysis shows Tutor CoPilot <b>promotes effective pedagogy, increasing the use of probing questions</b> and reducing generic praise."</i></p>
+          Tutor CoPilot: A Human-AI Approach for Scaling Real-Time Expertise (R. Wang et al., 2025), 
 
       </div>
     ),
@@ -473,21 +474,14 @@ const slides: SlideType[] = [
     subtitle: "",
     center: true,
     content: (
-      <div style={{ width: "100%" }}>
-        <div style={embedCard}>
-          <iframe
-            src="/ai_dependency.pdf"
-            title="PDF Viewer"
-            style={{
-              width: "100%",
-              height: "70vh",
-              minHeight: "420px",
-              maxHeight: "560px",
-              border: "none",
-              display: "block",
-            }}
-          />
-        </div>
+      <div>
+          <p><i>"Results indicated that greater <b>AI dependence was associated with lower levels of critical
+            thinking</b>, with cognitive fatigue partially mediating this relationship."</i></p>
+         Learners’ AI dependence and critical thinking: The psychological mechanism of fatigue and the social buffering role of AI literacy (Tian & Zhang, 2026). 
+   
+          <p><i>"These findings highlight both the promise and the <b>complexity of designing AI tutors to elicit and maintain constructive mathematical engagement</b>."</i></p>
+         Constructive or Procedural? Student Engagement With an AI Tutor in Multivariable Calculus (Politou & Sellbach-Allen, 2026), 
+
       </div>
     ),
   },
@@ -513,12 +507,13 @@ const slides: SlideType[] = [
         >
           <h3 style={{ marginTop: 0 }}>Future of Jobs Report, WEF 2025</h3>
       <p>
-          The future of work is defined by skill transformation, not job disappearance.
+          Core Skills:
         </p>
         <ul>
-          <li>skill transformation,</li>
-          <li>demand shifting toward: analytical thinking, creative thinking, problem-solcing, flexibility</li>
-          <li>workers not reskilling fast enough</li>
+          <li><i>Analytical Thinking</i></li>
+          <li><i>Flexibility</i>, Resilience</li>
+          <li>Leadership</li>
+          <li><i>Creative Thinking</i></li>
         </ul>
         </div>
         <div
@@ -564,7 +559,7 @@ const slides: SlideType[] = [
     ),
   },
   {
-    title: "Potential Challenges",
+    title: "AI Tutor for Multivariable Calculus",
     subtitle: "",
     center: true,
     content: (
@@ -608,7 +603,7 @@ const slides: SlideType[] = [
       <div>
           <iframe
             title="Applet"
-            src="https://rodericguigocorominas.github.io/linalg-tf-practice"
+            src="https://rodericguigocorominas.github.io/linalg-tf-practice/"
             style={{ width: "500%", height: "100%", border: "none" }}
           />
       </div>
@@ -620,11 +615,15 @@ const slides: SlideType[] = [
     center: true,
     content: (
       <div>
+        Noticed:
         <ul>
           <li>Decreased attendance in office hours</li>
           <li>Weak correlation between homework and exam performance</li>
+        </ul>
+        Acted:
+        <ul>
           <li>Reweighted course syllabus components</li>
-          <li>Implemented a standards based grading with a double threshhold</li>
+          <li>Implemented a standards based grading with a double threshold</li>
           <li>Made attendance mandatory</li>
         </ul>
       </div>
@@ -632,13 +631,13 @@ const slides: SlideType[] = [
   },
   {
     title: "My Reflections",
-    subtitle: "Future Of Education",
+    subtitle: "The Future of Quantitative Education",
     center: true,
     content: null,
   },
   {
     title: "First Reflection",
-    subtitle: "Aim for a Controlled Use of AI",
+    subtitle: "Aim for a Guided Use of AI",
     center: true,
     content: (
         <div
@@ -663,7 +662,7 @@ const slides: SlideType[] = [
         <ul>
           <li>Cognitive Load Management</li>
           <li>Growth Mindset</li>
-          <li>Curated Content</li>
+          <li>Tailored Content</li>
         </ul>
         </div>
         <div
@@ -685,7 +684,7 @@ const slides: SlideType[] = [
   },
   {
     title: "Second Reflection",
-    subtitle: "Practical vs Conceptual",
+    subtitle: "Practical vs Conceptual Knowledge",
     center: true,
     content: (
             <div
@@ -749,7 +748,7 @@ const slides: SlideType[] = [
         >
           <h3 style={{ marginTop: 0 }}>A Rare Gem</h3>
           <p>
-            In person instruction will become a unique, controlled environment,
+            In-person instruction will become a unique, controlled environment,
             in which students will actively engage with
             problem-solving, critical thinking, with limited technology.
           </p>
@@ -973,9 +972,8 @@ const slides: SlideType[] = [
           }}
         >
           <h3 style={{ marginTop: 0 }}>After college</h3>
-          Join the workforce with strong 
-          critical thinking and interpersonal skills to contribute effectively 
-          in AI-enabled environments.
+          Join the workforce combining 
+          critical thinking and interpersonal skills with AI-enabled environments.
         </div>
       </div>
     ),
@@ -1026,22 +1024,21 @@ const slides: SlideType[] = [
           }}
         >
           <h3 style={{ marginTop: 0 }}>After college</h3>
-            Join the workforce with strong 
-          critical thinking and interpersonal skills to contribute effectively 
-          in AI-enabled environments.
+          Join the workforce combining 
+          critical thinking and interpersonal skills with AI-enabled environments.
         </div>
       </div>
     ),
   },   
   {
     title: "The Human Component",
-    subtitle: "What We Are Already Doing Right",
+    subtitle: "The Value of Human Interactions",
     center: true,
     content: null,
   },
   {
     title: "Why am I here?",
-    subtitle: "The Value of Presence and Human Relationships",
+    subtitle: "The Value of Human Interactions",
     center: true,
     content: (
     <div
@@ -1062,64 +1059,8 @@ const slides: SlideType[] = [
 
     ),
   },
-  {
-  title: "Harvard Introductory Math",
-  subtitle: "How to Take Active Learning to the next Level",
-  center: true,
-  content: (
-    <div
-      style={{
-        display: "flex",
-        gap: "14px",
-        alignItems: "flex-start",
-        maxWidth: "1200px",
-        margin: "0 auto",
-      }}
-    >
-      {/* Left: your original box */}
-      <div
-        style={{
-          flex: 1,
-          background: "#f8fafc",
-          borderRadius: "18px",
-          padding: "24px",
-          border: "1px solid #e2e8f0",
-        }}
-      >
-        <ul>
-          <li>75 minute small sections of 25 - 40 students</li>
-          <li>Mix of active learning and mini-lectures</li>
-          <li>Daily homework</li>
-          <li>Four assessments throughout the semester</li>
-          <li>Focus on narrative</li>
-        </ul>
-      </div>
-
-      {/* Right: image */}
-      <div
-        style={{
-          width: "550px",
-          borderRadius: "18px",
-          overflow: "hidden",
-          border: "1px solid #e2e8f0",
-        }}
-      >
-        <img
-          src="active_learning.png"
-          alt="Harvard classroom"
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            display: "block",
-          }}
-        />
-      </div>
-    </div>
-  ),
-},
 {
-  title: "Narrative and Aesthetics",
+  title: "Aesthetics and Narrative",
   subtitle: "Enhancing Experience and Learning Through Aesthetics",
   center: true,
   content: (
@@ -1184,15 +1125,71 @@ const slides: SlideType[] = [
           }}
         >
         <ul>
-          <li>Classes, textbooks typically follow <i>uninteresting</i> story archs</li>
-          <li>Topics are introuced linearly, not allow for connections</li>
-          <li>Little emphasize the need for discovery</li>
-          <li>Foster an environment that motivates geniune engagement, human component,</li>
+          <li>Classes and textbooks often follow rigid, unengaging narrative arcs</li>
+          <li>Topics are introduced in a linear way, making it harder to see connections across subfields</li>
+          <li>Often greater emphasis on problem-solving than on creativity, exploration, and discovery</li>
+          <li>Learning can feel individualistic, with little room for communication and human interaction</li>
         </ul>
       </div>
     ),
   },
   {
+  title: "Harvard Introductory Math",
+  subtitle: "Taking Active Learning to the Next Level",
+  center: true,
+  content: (
+    <div
+      style={{
+        display: "flex",
+        gap: "14px",
+        alignItems: "flex-start",
+        maxWidth: "1200px",
+        margin: "0 auto",
+      }}
+    >
+      {/* Left: your original box */}
+      <div
+        style={{
+          flex: 1,
+          background: "#f8fafc",
+          borderRadius: "18px",
+          padding: "24px",
+          border: "1px solid #e2e8f0",
+        }}
+      >
+        <ul>
+          <li>75 minute small sections of 25 - 40 students</li>
+          <li>Mix of active learning and mini-lectures</li>
+          <li>Daily homework</li>
+          <li>Four assessments throughout the semester</li>
+          <li>Focus on narrative</li>
+        </ul>
+      </div>
+
+      {/* Right: image */}
+      <div
+        style={{
+          width: "550px",
+          borderRadius: "18px",
+          overflow: "hidden",
+          border: "1px solid #e2e8f0",
+        }}
+      >
+        <img
+          src="active_learning.png"
+          alt="Harvard classroom"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            display: "block",
+          }}
+        />
+      </div>
+    </div>
+  ),
+},
+{
     title: "Narrative and Aesthetics",
     subtitle: "Framework (L. Dietiker)",
     center: true,
@@ -1258,9 +1255,9 @@ const slides: SlideType[] = [
           <h3 style={{ marginTop: 0 }}>The Questions</h3>
         The role of <i>narrative</i> in
         <ul>
-          <li>student experience</li>
-          <li>student engagement</li>
-          <li>student learning</li>
+          <li>Student experience</li>
+          <li>Student engagement</li>
+          <li>Student learning</li>
         </ul>
         </div>
         <div
@@ -1273,9 +1270,8 @@ const slides: SlideType[] = [
         >
           <h3 style={{ marginTop: 0 }}>Our Study</h3>
             <ul>
-              <li>Four instructors</li>
+              <li>Four instructors with different backgrounds</li>
               <li>Same lessons in a coordinated course</li>
-              <li>Different backgrounds and experience</li>
             </ul>
         
         </div>
@@ -1299,7 +1295,7 @@ const slides: SlideType[] = [
     ),
   },
   {
-    title: "Comparison",
+    title: "Comparing the Same Lesson",
     subtitle: "Green's Theorem",
     center: true,
     content: (
@@ -1355,15 +1351,18 @@ const slides: SlideType[] = [
     ),
   },
   {
-    title: "Narrative in Teaching",
+    title: "Narrative in Multivariable Calculus",
     subtitle: "",
     center: true,
     content: (
       <div>
         <ul>
           <li>Create tensions through jamming, foreshadowing, suspense, equivocation. </li>
-          <li>Distinguishing Ap</li>
-          <li>Make lessons distinguishable and relevant. </li>
+          <li>Distinguish in-person teaching in mathematics:</li>
+          <ul>
+            <li>Experience-rich</li>
+            <li>Relatable to the real world. Think Mathematically</li>
+          </ul>
         </ul>
       </div>
     ),
@@ -1375,17 +1374,17 @@ const slides: SlideType[] = [
     content: (
       <div>
         <ul>
-          <li>Results To Be Presented at MathFest (Boston August 2026)</li>
-          <li>Distinguishing Ap</li>
-          <li>Make lessons distinguishable and relevant. </li>
+          <li>Abstract submitted to MathFest (August 5-8, Boston)</li>
+          <li>Noticed many actionable tasks with current material</li>
+          <li>Make lessons distinguishable and relevant</li>
         </ul>
       </div>
     ),
   },
   {
     id: "choose",
-    title: "What should we explore?",
-    subtitle: "Audience choice",
+    title: "Thanks for Listening!!!",
+    subtitle: "... anything else that should we explore?",
     center: true,
     content: (
       <div
@@ -1399,7 +1398,7 @@ const slides: SlideType[] = [
         {[
           { label: "About Myself", id: "about-me" },
           { label: "Other Research", id: "research" },
-          { label: "Math for Data Science", id: "math-data" },
+          { label: "Curriculum Development", id: "curriculum" },
           { label: "Other ", id: "misc" },
         ].map((item) => (
           <div
@@ -1423,22 +1422,98 @@ const slides: SlideType[] = [
     ),
   },
   {
-    id: "about-me",
-    title: "About Myself",
-    subtitle: "Results of Ongoing Study",
+  id: "about-me",
+  title: "About Myself",
+  subtitle: "Other things I like to do",
+  center: true,
+  content: (
+    <div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr 1fr",
+    gap: "10px",
+    alignItems: "start",
+  }}
+>
+  {/* Video */}
+  <div style={{ textAlign: "center" }}>
+    <video
+      src="/seasons.mp4"
+      controls
+      style={{ width: "100%", maxHeight: "50vh" }}
+    />
+    <p style={{ marginTop: "6px", fontSize: "0.85em", color: "#666" }}>
+      Haydn's Seasons
+    </p>
+  </div>
+
+  {/* Image 1 */}
+  <div style={{ textAlign: "center" }}>
+    <img
+      src="/winter_presi.png"
+      alt="Winter Hike"
+      style={{ width: "100%", maxHeight: "50vh", objectFit: "contain" }}
+    />
+    <p style={{ marginTop: "6px", fontSize: "0.85em", color: "#666" }}>
+      Winter Presidential Traverse
+    </p>
+  </div>
+
+  {/* Image 2 */}
+  <div style={{ textAlign: "center" }}>
+    <img
+      src="/annenberg.jpg"
+      alt="Annenberg"
+      style={{ width: "100%", maxHeight: "50vh", objectFit: "contain" }}
+    />
+    <p style={{ marginTop: "6px", fontSize: "0.85em", color: "#666" }}>
+      Faculty Dinners
+    </p>
+  </div>
+</div>
+  ),
+},
+  {
+    id: "research",
+    title: "Research",
+    subtitle: "Other projects I have been part of",
     center: true,
     content: (
       <div>
+         <iframe
+            src="/can_transformers_do.pdf"
+            title="PDF Viewer"
+            style={{
+              width: "100%",
+              height: "70vh",
+              minHeight: "420px",
+              maxHeight: "560px",
+              border: "none",
+              display: "block",
+            }}
+          />
       </div>
     ),
   },
   {
-    id: "research",
-    title: "Research",
-    subtitle: "Results of Ongoing Study",
+    id: "math-data",
+    title: "Math for Data Science",
+    subtitle: "Rethinking Calculus and Linear Algebra",
     center: true,
     content: (
-      <div>
+  <div>
+         <iframe
+            src="/math_for_ds.pdf"
+            title="PDF Viewer"
+            style={{
+              width: "100%",
+              height: "70vh",
+              minHeight: "420px",
+              maxHeight: "560px",
+              border: "none",
+              display: "block",
+            }}
+          />
       </div>
     ),
   },
@@ -1463,7 +1538,7 @@ const slides: SlideType[] = [
     ),
   },
   {
-  title: "Teaching Data Science",
+  title: "Teaching Data Science and Modeling",
   subtitle: "Four images",
   center: true,
   content: (
@@ -1477,9 +1552,9 @@ const slides: SlideType[] = [
       }}
     >
       {[
-        { src: "lecture_uzhhorod.jpg", caption: "Uzhhorod, Ukraine" },
-        { src: "/images/pic2.jpg", caption: "Example 2" },
-        { src: "/images/pic3.jpg", caption: "Example 3" },
+        { src: "lecture_uzhhorod.jpg", caption: "ML Workshop, Uzhhorod, Ukraine" },
+        { src: "teaching_2.jpg", caption: "Math Modeling for Life Sciences, Harvard " },
+        { src: "teaching_3.png", caption: "Math for ML, Harvard" },
         { src: "/images/pic4.jpg", caption: "Example 4" },
       ].map((item, i) => (
         <div
@@ -1548,7 +1623,7 @@ function ChooseSlide({ goToSlide }: { goToSlide: (id: string) => void }) {
   const items = [
     { label: "About Myself", id: "about-me" },
     { label: "Other Research", id: "research" },
-    { label: "Math for Data Science", id: "math-data" },
+    { label: "Curriculum Development", id: "curriculum" },
     { label: "Other", id: "misc" },
   ];
 
